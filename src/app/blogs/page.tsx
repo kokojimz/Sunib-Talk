@@ -1,8 +1,9 @@
 import prisma from '@/lib/db';
+import { Post } from '@prisma/client';
 import Link from 'next/link';
 
 const BlogsPage = async () => {
-    const posts = await prisma.post.findMany({
+    const posts: Post[] = await prisma.post.findMany({
         orderBy: {
             createdAt: 'desc',
         },
@@ -22,7 +23,7 @@ const BlogsPage = async () => {
                         className='bg-white p-4 rounded-md shadow-md'
                     >
                         <h2 className='text-xl font-bold'>{post.title}</h2>
-                        <p>Written by: {post.author?.name}</p>
+                        <p>Written by: {post.authorEmail}</p>
                     </Link>
                 ))}
             </div>
