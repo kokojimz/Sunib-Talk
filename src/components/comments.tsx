@@ -17,7 +17,7 @@ const Comments: FC<CommentsProps> = async ({ postId }) => {
 
     return (
         <div className='mt-8'>
-            <h2 className='text-2xl font-bold'>Comments</h2>
+            <h2 className='text-2xl font-bold mb-1'>Comments</h2>
             <ul>
                 {comments.map((comment) => (
                     <li key={comment.id} className='mb-4 bg-slate-300 p-2 rounded-md'>

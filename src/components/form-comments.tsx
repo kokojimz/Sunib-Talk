@@ -25,6 +25,7 @@ const FormComment: FC<FormCommentProps> = ({ postId }) => {
                     text: comment,
                 });
                 if (newComment.status === 200) {
+                    setComment('');
                     router.refresh();
                 }
             } catch (error) {
@@ -33,6 +34,12 @@ const FormComment: FC<FormCommentProps> = ({ postId }) => {
         }
     };
 
+    const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            handleSubmitComment();
+        }
+    };
+    
     return (
         <div>
             <div className='mt-4'>
@@ -48,6 +55,7 @@ const FormComment: FC<FormCommentProps> = ({ postId }) => {
                     type='text'
                     className='w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300'
                     name='comment'
+                    onKeyDown={handleEnter}
                 />
                 <button
                     disabled={!data?.user?.email}
