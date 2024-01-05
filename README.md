@@ -9,7 +9,10 @@ Sunib-Talk is a website-based platform where BINUS University students can creat
 - Prisma ORM (PostgreSQL)
 
 ## Entity-Relationship Diagram
-![Relational_Table _AOL](https://github.com/kokojimz/Sunib-Talk/assets/93468154/a68c0b2b-034a-4fb6-b003-9ff5e9b18162)
+![AOL ERD](https://github.com/kokojimz/Sunib-Talk/assets/93468154/57671a84-d923-4a9c-ba02-573d0ef56cec)
+
+## Class Diagram
+![Relational_Table _AOL](https://github.com/kokojimz/Sunib-Talk/assets/93468154/257a29d2-837f-4c26-8659-7da3bb6a3b9a)
 
   
 ## Developed by
